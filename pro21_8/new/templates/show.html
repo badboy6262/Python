@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Show Marks</title>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>Java</th>
+			<th>Python</th>
+		</tr>
+	{%for stu in data%} 
+		<tr>
+		<td>{{stu.no}}</td>
+		<td>{{stu.name}}</td>
+		<td>{{stu.java}}</td>
+		<td>{{stu.py}}</td>
+		<td><a href="{% url 'deleteData' name=stu.name %}">Delete</a></td>
+		</tr>
+	{%endfor%}
+	</table>
+</body>
+</html>
